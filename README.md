@@ -30,18 +30,18 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
   ```
   ------------------------------------------
   ### Operadores de igualdade 
-  - == 
+  - == :
     Deve ser evitado, não seguro, pois tem propriedades incomuns.
     "42" == 42 (string igual a inteiro)
     0 == " false "
     null == undefined 
     " " == 0 
     [1, 2] == "1, 2"
-  - ===
+  - === :
     Geralmente usado, seguro.
     NaN (not a number) em Object.is não é igual a NaN, retorna false.
     + 0 é igual a - 0.
-  - Object.is
+  - Object.is :
     Menos usado, porém igualmente seguro
     NaN (not a number) em Object.is é igual a NaN, retorna true.
     + 0 é diferente de - 0.
