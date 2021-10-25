@@ -37,13 +37,13 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
     null == undefined <br>
     " " == 0 <br>
     [1, 2] == "1, 2"<br>
-  - === :
-    Geralmente usado, seguro.
-    NaN (not a number) em Object.is não é igual a NaN, retorna false.
-    + 0 é igual a - 0.
-  - Object.is :
-    Menos usado, porém igualmente seguro
-    NaN (not a number) em Object.is é igual a NaN, retorna true.
-    + 0 é diferente de - 0.
+  - === : <br>
+    Geralmente usado, seguro. <br>
+    NaN (not a number) em Object.is não é igual a NaN, retorna false. <br> 
+    + 0 é igual a - 0. <br>
+  - Object.is : <br>
+    Menos usado, porém igualmente seguro. <br>
+    NaN (not a number) em Object.is é igual a NaN, retorna true.< br>
+    + 0 é diferente de - 0.<br>
  ------------------------------------------
 
