@@ -63,6 +63,8 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
     ```
  ------------------------------------------
  ### Funções de Object
+ - `Object.keys(Objeto);`
+ Exibe em um vetor de cima para baixo o nome das propriedades do objeto.
  - `Object.assign`
  Object.assign é uma propriedade útil, pois ela mescla propriedades de um objeto com outro objeto.
  ``` bash 
@@ -86,6 +88,67 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
 ```
 - `Object.create()`
 Forma mais detalhada de criar objetos, com o mesmo resultado, porém menos usual e de sintaxe menos limpa.
+- `Object.getOwnPropertyDescriptor (Objeto, propriedade);`
+ Usado para ver os atributos de uma propriedade: Value, writable, enumerable, configurable.
+- `Object.defineProperty(Objeto, propriedade), {atributo, true ou false} ; `
+Define os atribudos de uma propriedade.
+- `Object.freeze (Propiedade)`
+Congela alterações nos atributos dessa propriedade.
 
 ------------------------------------------
+## Notação de colchetes (Bracket Notation)
+``` bash 
+   let person1{
+   fistName = "Gui"
+   lastName = "Heringer"
+   age: 21
+   person1.isAdult { return this.age > 18;}
+   }
 
+   let healthStats = {
+   height = 1,86 ,
+   weight = 70;
+   }
+   display(person.firstName); // O que se faz normalmente
+   // Também podemos escrever da seguinte forma:
+   display(person[`firstName`]; // a notação bracket me permite colocar nomes que nas propriedades que eu nã
+o poderia colocar comumente como:
+  display(person[`first name`]; // soltando espaço ou usando caracteres especiais, porque agora o nome da propriedade é
+ uma string.
+ ```
+ <br> Também é útil se usado com o for in para mostrar o conteúdo das prorpriedades.
+  ``` bash
+  for (let nomeProps in person) { 
+   display(nomeProps + `: ` + person[propertyName]);
+  }
+  ```
+  ------------------------------------------
+  ## Setter & Getter
+  ``` bash
+ `use strict`
+(function()){
+
+    let person = {
+        name: {
+            first: `Gui` ,
+            last: `Heringer`
+        },
+        age: 21
+    }
+
+    Object.defineProperty(person,`fullName`,{ //criando uma propriedade fullName
+        get : function(){
+            return this.name.first + ` ` + this.last.name;
+        },
+        set: function (value){
+            let nameParts = value.split (` `);
+            this.name.first = nameParts [0];
+            this.name.last = namePartsp[1];
+        }
+    });
+    person.fullName = `Ana Paula`;
+    display(person.fullName);
+}
+
+```
+------------------------------------------
