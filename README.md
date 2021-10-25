@@ -54,7 +54,6 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
         person1 === person2 // false <br>
         Object.is(person1,person2) // false <br>
       ```
-        
        <br> Quando se trata de variáveis do tipo primitivo o JavaScript compara o seus conteúdos:
     ``` bash
         firstName1 = "Gui"
