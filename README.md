@@ -62,4 +62,25 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
         fistName1 = firstName2 // true
     ```
  ------------------------------------------
-
+ ### Funções de Object
+ - `Object.assign`
+ Object.assign é uma propriedade útil, pois ela mescla propriedades de um objeto com outro objeto.
+ ``` bash 
+ let person1{
+ fistName = "Gui"
+ lastName = "Heringer"
+ age: 21
+ person1.isAdult { return this.age > 18;}
+ }
+ 
+ let healthStats = {
+ height = 1,86 ,
+ weight = 70;
+ }
+ 
+ //deseja-se fundir healthStats em Person1
+  //criando uma função que retorna um novo objeto fundido, para não alterar os objetos originais, no caso o person1.
+  function mergeStatsHealth (person, healthStats){
+    return Object.assign({}, person, healthStats); //coloca esse objeto em branco no primeiro parametro para alterar ele, e não person1. Parametro da direita é o a fundir e o direita é onde fundir.
+  }
+```
