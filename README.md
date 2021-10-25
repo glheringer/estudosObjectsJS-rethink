@@ -84,3 +84,8 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
     return Object.assign({}, person, healthStats); //coloca esse objeto em branco no primeiro parametro para alterar ele, e não person1. Parametro da direita é o a fundir e o direita é onde fundir.
   }
 ```
+- `Object.create()`
+Forma mais detalhada de criar objetos, com o mesmo resultado, porém menos usual e de sintaxe menos limpa.
+
+------------------------------------------
+
