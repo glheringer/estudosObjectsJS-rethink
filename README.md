@@ -45,8 +45,8 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
     Menos usado, porém igualmente seguro. <br>
     NaN (not a number) em Object.is é igual a NaN, retorna true.< br>
     + 0 é diferente de - 0.<br>
-    <p> Diferença de comparação de Objetos e variáveis no JS. </p>
-        Quando se trata de Objetos o JavaScript não considera o conteúdo do Objeto na comparação e sim seu endereço de memória: 
+     Diferença de comparação de Objetos e variáveis no JS. 
+        Quando se trata de Objetos o JavaScript não considera o conteúdo do Objeto na comparação e sim seu endereço de memória: <br>
       ``` bash
         let person1 = { firstName: Gui , lastName: Heringer } <br>
         let person2 = {firstName: Gui , lastName: Heringer } <br>
@@ -54,7 +54,7 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
         person1 === person2 // false <br>
         Object.is(person1,person2) // false <br>
       ```
-       <br> Quando se trata de variáveis do tipo primitivo o JavaScript compara o seus conteúdos:
+       <br> Quando se trata de variáveis do tipo primitivo o JavaScript compara o seus conteúdos: <br>
     ``` bash
         firstName1 = "Gui"
         firstName2 = "Gui" 
