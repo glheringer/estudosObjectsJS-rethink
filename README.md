@@ -40,11 +40,11 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
   - === : <br>
     Geralmente usado, seguro. <br>
     NaN (not a number) em Object.is não é igual a NaN, retorna false. <br> 
-    + 0 é igual a - 0. <br>
+     + 0 é igual a - 0. <br>
   - Object.is : <br>
     Menos usado, porém igualmente seguro. <br>
     NaN (not a number) em Object.is é igual a NaN, retorna true.< br>
-    + 0 é diferente de - 0.<br>
+     + 0 é diferente de - 0.<br>
      
      <br>Diferença de comparação de Objetos e variáveis no JS. 
         Quando se trata de Objetos o JavaScript não considera o conteúdo do Objeto na comparação e sim seu endereço de memória: <br>
