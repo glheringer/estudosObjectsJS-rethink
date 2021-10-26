@@ -6,7 +6,7 @@ Objetos são basicamente tipos de variáveis mais complexos, são essencialmente
 ### Dinamicidade dos Objetos em Javascript
 Em javascript você pode criar propriedades e até funções de uma classe (objeto) fora de seu escopo {}
 
-``` bash
+``` JavaScript
   let person = {
   firstName = Gui
   lastName= Heringer
@@ -17,13 +17,13 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
    display(person.isAdult());
   ```
  Dentro de um objeto e de uma classe, a sintaxe da função isAdult pode ser abreviada, tornando-se assim:
- ``` bash
+ ``` JavaScript
   person.isAdult { return this.age >= 18;}
  ```
  ------------------------------------------
  ### Propriedade For- in
  O laço for...in  interage sobre propriedades enumeradas de um objeto, na ordem original de inserção.
- ``` bash
+ ``` JavaScript
   for (let nomeProps in person) { //percorre cada propriedade da classe person de cima para baixo, atribuindo o valor das variáveis dele à variável nomeProps.
    display(nomeProps);
   }
@@ -48,7 +48,7 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
      
      <br>Diferença de comparação de Objetos e variáveis no JS. 
         Quando se trata de Objetos o JavaScript não considera o conteúdo do Objeto na comparação e sim seu endereço de memória: <br>
-      ``` bash
+      ``` JavaScript
         let person1 = { firstName: Gui , lastName: Heringer } 
         let person2 = {firstName: Gui , lastName: Heringer } 
         person1 == person2 // false 
@@ -67,7 +67,7 @@ Em javascript você pode criar propriedades e até funções de uma classe (obje
  Exibe em um vetor de cima para baixo o nome das propriedades do objeto.
  - `Object.assign`
  Object.assign é uma propriedade útil, pois ela mescla propriedades de um objeto com outro objeto.
- ``` bash 
+ ``` JavaScript 
  let person1{
  fistName = "Gui"
  lastName = "Heringer"
@@ -97,7 +97,7 @@ Congela alterações nos atributos dessa propriedade.
 
 ------------------------------------------
 ## Notação de colchetes (Bracket Notation)
-``` bash 
+``` JavaScript 
    let person1{
    fistName = "Gui"
    lastName = "Heringer"
@@ -124,7 +124,7 @@ o poderia colocar comumente como:
   ```
   ------------------------------------------
   ## Setter & Getter
-  ``` bash
+  ``` JavaScript
  `use strict`
 (function()){
 
