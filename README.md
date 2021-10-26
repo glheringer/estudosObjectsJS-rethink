@@ -151,6 +151,10 @@ o poderia colocar comumente como:
 }
 
 ```
+------------------------------------------   
+## Protótipos
+Sim existe propertype em classes assim como nas funções e são definidas de uma forma similar: Usando: Object.defineProperty(Person.proportype, 'firstName', {enumerable: true}); // usado da mesma forma com outros Prototype.
+
 ------------------------------------------
 ## Herança em JavaScript
   - Em Funções:  
@@ -190,4 +194,3 @@ o poderia colocar comumente como:
   
   - Em Classes:
    Igualmente ao Java, usando a propriedade Extends, fazendo isso é feita automaticamente a herança. Lembrete: para usar o construtor da classe mãe , usa-se o método `super();`.
-------------------------------------------   
