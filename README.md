@@ -152,3 +152,42 @@ o poderia colocar comumente como:
 
 ```
 ------------------------------------------
+## Herança em JavaScript
+  - Em Funções:  
+  Usa-se as classes protótipos dos dois objetos que se deseja fazer herança adicionando uma classe protótipo no subnível da outra.
+  ``` JavaScript
+  // esta classe está herdando de uma classe Person já criada, com as propriedades: fistName,lastName,age, set and get fullname.
+  function Student(firstName, lastName, age) {
+    Person.call(this, firstName, lastName, age); //linha propriamente dita para fazer herança
+    this._enrolledCourses = [];
+   
+    this.enroll = function(courseId) { 
+      this._enrolledCourses.push(courseId);
+    };
+   
+    this.getCourses = function() {
+      return this.fullName + "'s enrolled courses are: " +
+        this._enrolledCourses.join(', ');
+    };
+  }
+  Student.prototype = Object.create(Person.prototype); //linha propriamente dita para fazer herança
+  Student.prototype.constructor = Student;  //linha propriamente dita para fazer herança
+  Student.fromPerson = function(person) {
+    return new Student(person.firstName, person.lastName, person.age);
+  }
+  
+
+  let jim = new Student('Jim', 'Cooper', 29);
+  jim.enroll('CS205');
+  jim.enroll('MA101');
+  jim.enroll('PS101');
+   
+  display(jim.getCourses());
+
+})();
+  
+  ```
+  
+  - Em Classes:
+   Igualmente ao Java, usando a propriedade Extends, fazendo isso é feita automaticamente a herança. Lembrete: para usar o construtor da classe mãe , usa-se o método `super();`.
+------------------------------------------   
