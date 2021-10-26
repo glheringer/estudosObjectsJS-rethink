@@ -153,6 +153,10 @@ o poderia colocar comumente como:
 ```
 ------------------------------------------   
 ## Protótipos
+Prototype é um objeto que esta em todas as funções de JavaScript. É usado como um protótipo quando a função é usado como um contrutor de objectos. Quando se muda um prototype todos objetos que usam essa Function Prototype iram mudar também Person.prototype.age = 30 todos objetos teram 30 anos. Porém se editar apenas diretamente o `jim.age = 18` pela Inheritance apenas o jim tera 18, e tambem tera agora sua propria property AGE.
+
+Em um cadeia/corrente de Inheritance é necessário criar 3 linhas: Dentro da função: Person.call(this, firstNAme, lastName, age)// para trazer as infos de Person para Student Fora da função : Students.prototype = Objects.create(Person.prototype); Students.prototype.constructor = Student;
+
 Sim existe propertype em classes assim como nas funções e são definidas de uma forma similar: Usando: Object.defineProperty(Person.proportype, 'firstName', {enumerable: true}); // usado da mesma forma com outros Prototype.
 
 ------------------------------------------
